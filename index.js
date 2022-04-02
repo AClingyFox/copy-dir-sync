@@ -12,7 +12,7 @@ function copyDirSyncRunner (fileOrDir, currentPath, dest) {
         const newDest = path.join(dest, fileOrDir);
         fs.mkdirSync(newDest);
         const contents = fs.readdirSync(newPath);
-        contents.forEach(content => copyDirSync(content, newPath, newDest));
+        contents.forEach(content => copyDirSyncRunner(content, newPath, newDest));
     }
 }
 
