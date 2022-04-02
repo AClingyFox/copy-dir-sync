@@ -16,8 +16,12 @@ function copyDirSyncRunner (fileOrDir, currentPath, dest) {
     }
 }
 
-function copyDirSync(dirPath) {
-    fs.readdirSync(dirPath).forEach(fileOrDir => copyDirSyncRunner(fileOrDir, tempNwjsNormalPath, nwjsNormalFolderPath));
+function copyDirSync(dirPath, dirDest) {
+    const destExists = fs.existsSync(dirDest);
+    if (destExists === false) {
+        fs.mkdirSync(dirDest);
+    }
+    fs.readdirSync(dirPath).forEach(fileOrDir => copyDirSyncRunner(fileOrDir, dirPath, dirDest));
 }
 
 module.exports = copyDirSync;
