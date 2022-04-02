@@ -1,0 +1,19 @@
+{
+  "name": "copy-dir-sync",
+  "version": "1.0.0",
+  "description": "Recursively copy the contents of a folder to another one.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AClingyFox/copy-dir-sync.git"
+  },
+  "author": "The Clingy Fox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AClingyFox/copy-dir-sync/issues"
+  },
+  "homepage": "https://github.com/AClingyFox/copy-dir-sync#readme"
+}
